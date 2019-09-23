@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class MyPresentationPage extends StatefulWidget {
   _MyPresentationPageState createState() => _MyPresentationPageState();
 }
@@ -86,7 +85,9 @@ class _MyPresentationPageState extends State<MyPresentationPage> {
                                 height: 48,
                                 minWidth: 155,
                                 child: Text("Login", style: TextStyle(color: Colors.white, fontFamily: 'Avenir-Heavy'),),
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.pushNamed(context, '/login');
+                                },
                               ),
                               SizedBox(
                                 height: 48,

@@ -19,10 +19,13 @@ class _MyLoginPageState extends State<MyLoginPage> {
             children: <Widget>[
               Align(
                 alignment: Alignment.topLeft,
-                child: Icon(
-                  Icons.arrow_back,
-                  color: Color(0xff042c5c),
-                  size: 24.0
+                child: GestureDetector(
+                  onTap: () {Navigator.pop(context);},
+                  child: Icon(
+                    Icons.arrow_back,
+                    color: Color(0xff042c5c),
+                    size: 24.0
+                  )
                 )
               ),
               Container(height: 40,),
@@ -131,7 +134,9 @@ class _MyLoginPageState extends State<MyLoginPage> {
                   shape: new RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
                   color: Color(0xff0047cc),
                   child: Text("Login", style: TextStyle(color: Colors.white),),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/home');
+                  },
                 )
               ),
               Container(height: 30,),
